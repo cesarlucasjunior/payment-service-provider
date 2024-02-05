@@ -1,0 +1,15 @@
+version: '3'
+services:
+  psp-db:
+    image: postgres:latest
+    container_name: psp-db
+    restart: always
+    tty: true
+    volumes:
+      - .volume:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_PASSWORD=123456
+      - POSTGRES_USER=admin
+      - POSTGRES_DB=payment-service
