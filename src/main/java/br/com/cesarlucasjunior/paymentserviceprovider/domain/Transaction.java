@@ -27,7 +27,6 @@ public class Transaction {
     private PaymentMethod paymentMethod;
     private String cardNumber;
     private String nameCardNumber;
-    @LegalExpirationCardDate
     private LocalDate expirationDate;
     private String verificationCode;
     private LocalDate transactionDate;
