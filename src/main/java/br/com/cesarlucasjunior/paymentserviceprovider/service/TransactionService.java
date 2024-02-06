@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
+import java.util.List;
 
 @Service
 public class TransactionService {
@@ -27,5 +28,9 @@ public class TransactionService {
         );
 
         return transactionRepository.save(transaction);
+    }
+
+    public List<Transaction> findAll() {
+        return transactionRepository.findAll();
     }
 }
